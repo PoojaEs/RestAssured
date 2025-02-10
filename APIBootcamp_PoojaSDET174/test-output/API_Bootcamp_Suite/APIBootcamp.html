@@ -1,0 +1,198 @@
+<html>
+<head>
+<title>TestNG:  APIBootcamp</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>APIBootcamp</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>13/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Feb 10 12:21:05 EST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>9 seconds (9974 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nn.apibootcamp.test.Post_NegativeTestCase.validate_uniqueField_constraint()'><b>validate_uniqueField_constraint</b><br>Test class: com.nn.apibootcamp.test.Post_NegativeTestCase<br>Parameters: {Run=Yes, firstname=aeg, lastname=dasvsr, Email=eag@gmail.com, contact_no=6789208111, Plot_no=9-a, street=esag, state=esfg, country=eag, zipcode=12398}</td>
+<td><div><pre>java.lang.AssertionError: expected [409] but found [400]
+	at com.nn.apibootcamp.test.Post_NegativeTestCase.validate_uniqueField_constraint(Post_NegativeTestCase.java:64)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace40514511", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace40514511'><pre>java.lang.AssertionError: expected [409] but found [400]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:1418)
+	at org.testng.Assert.assertEquals(Assert.java:1382)
+	at org.testng.Assert.assertEquals(Assert.java:1428)
+	at com.nn.apibootcamp.test.Post_NegativeTestCase.validate_uniqueField_constraint(Post_NegativeTestCase.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>com.nn.apibootcamp.test.Post_NegativeTestCase@6bbe85a8</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nn.apibootcamp.test.API_Chaining_PositiveTestCase.testGetUserByFirstName()'><b>testGetUserByFirstName</b><br>Test class: com.nn.apibootcamp.test.API_Chaining_PositiveTestCase</td>
+<td></td>
+<td>0</td>
+<td>com.nn.apibootcamp.test.API_Chaining_PositiveTestCase@75d3a5e0</td></tr>
+<tr>
+<td title='com.nn.apibootcamp.test.PUT_NegativeTestCase.validate_Update_uniqueField_constraint()'><b>validate_Update_uniqueField_constraint</b><br>Test class: com.nn.apibootcamp.test.PUT_NegativeTestCase<br>Parameters: {Run=Yes, firstname=aeg, lastname=dasvsr, Email=eag@gmail.com, contact_no=6789208111, Plot_no=9-a, street=esag, state=esfg, country=eag, zipcode=12398}</td>
+<td></td>
+<td>0</td>
+<td>com.nn.apibootcamp.test.PUT_NegativeTestCase@3a7442c7</td></tr>
+<tr>
+<td title='com.nn.apibootcamp.test.API_Chaining_PositiveTestCase.testDeleteByUserId()'><b>testDeleteByUserId</b><br>Test class: com.nn.apibootcamp.test.API_Chaining_PositiveTestCase</td>
+<td></td>
+<td>0</td>
+<td>com.nn.apibootcamp.test.API_Chaining_PositiveTestCase@75d3a5e0</td></tr>
+<tr>
+<td title='com.nn.apibootcamp.test.GET_NegativeTestCase.validate_GetByincorrectFirstName()'><b>validate_GetByincorrectFirstName</b><br>Test class: com.nn.apibootcamp.test.GET_NegativeTestCase<br>Parameters: {Run=Yes, firstname=aeg, lastname=dasvsr, Email=eag@gmail.com, contact_no=6789208111, Plot_no=9-a, street=esag, state=esfg, country=eag, zipcode=12398}</td>
+<td></td>
+<td>0</td>
+<td>com.nn.apibootcamp.test.GET_NegativeTestCase@5149d738</td></tr>
+<tr>
+<td title='com.nn.apibootcamp.test.API_Chaining_PositiveTestCase.testGetUserByUserId()'><b>testGetUserByUserId</b><br>Test class: com.nn.apibootcamp.test.API_Chaining_PositiveTestCase</td>
+<td></td>
+<td>0</td>
+<td>com.nn.apibootcamp.test.API_Chaining_PositiveTestCase@75d3a5e0</td></tr>
+<tr>
+<td title='com.nn.apibootcamp.test.API_Chaining_PositiveTestCase.testUpdateUser()'><b>testUpdateUser</b><br>Test class: com.nn.apibootcamp.test.API_Chaining_PositiveTestCase</td>
+<td></td>
+<td>0</td>
+<td>com.nn.apibootcamp.test.API_Chaining_PositiveTestCase@75d3a5e0</td></tr>
+<tr>
+<td title='com.nn.apibootcamp.test.GET_NegativeTestCase.validate_GetByincorrectUseriD()'><b>validate_GetByincorrectUseriD</b><br>Test class: com.nn.apibootcamp.test.GET_NegativeTestCase<br>Parameters: {Run=Yes, firstname=aeg, lastname=dasvsr, Email=eag@gmail.com, contact_no=6789208111, Plot_no=9-a, street=esag, state=esfg, country=eag, zipcode=12398}</td>
+<td></td>
+<td>0</td>
+<td>com.nn.apibootcamp.test.GET_NegativeTestCase@5149d738</td></tr>
+<tr>
+<td title='com.nn.apibootcamp.test.GET_NegativeTestCase.validate_GetEndpoint()'><b>validate_GetEndpoint</b><br>Test class: com.nn.apibootcamp.test.GET_NegativeTestCase<br>Parameters: {Run=Yes, firstname=aeg, lastname=dasvsr, Email=eag@gmail.com, contact_no=6789208111, Plot_no=9-a, street=esag, state=esfg, country=eag, zipcode=12398}</td>
+<td></td>
+<td>0</td>
+<td>com.nn.apibootcamp.test.GET_NegativeTestCase@5149d738</td></tr>
+<tr>
+<td title='com.nn.apibootcamp.test.DELETE_NegativeTestCase.Validate_DeleteEndPoint()'><b>Validate_DeleteEndPoint</b><br>Test class: com.nn.apibootcamp.test.DELETE_NegativeTestCase<br>Parameters: {Run=Yes, firstname=aeg, lastname=dasvsr, Email=eag@gmail.com, contact_no=6789208111, Plot_no=9-a, street=esag, state=esfg, country=eag, zipcode=12398}</td>
+<td></td>
+<td>0</td>
+<td>com.nn.apibootcamp.test.DELETE_NegativeTestCase@4be29ed9</td></tr>
+<tr>
+<td title='com.nn.apibootcamp.test.API_Chaining_PositiveTestCase.testCreateUser()'><b>testCreateUser</b><br>Test class: com.nn.apibootcamp.test.API_Chaining_PositiveTestCase<br>Parameters: {Run=Yes, firstname=aeg, lastname=dasvsr, Email=eag@gmail.com, contact_no=6789208111, Plot_no=9-a, street=esag, state=esfg, country=eag, zipcode=12398}</td>
+<td></td>
+<td>3</td>
+<td>com.nn.apibootcamp.test.API_Chaining_PositiveTestCase@75d3a5e0</td></tr>
+<tr>
+<td title='com.nn.apibootcamp.test.PUT_NegativeTestCase.validate_incorrect_putEndpoint()'><b>validate_incorrect_putEndpoint</b><br>Test class: com.nn.apibootcamp.test.PUT_NegativeTestCase<br>Parameters: {Run=Yes, firstname=aeg, lastname=dasvsr, Email=eag@gmail.com, contact_no=6789208111, Plot_no=9-a, street=esag, state=esfg, country=eag, zipcode=12398}</td>
+<td></td>
+<td>0</td>
+<td>com.nn.apibootcamp.test.PUT_NegativeTestCase@3a7442c7</td></tr>
+<tr>
+<td title='com.nn.apibootcamp.test.DELETE_NegativeTestCase.Validate_deleteBy_incorrectUserId()'><b>Validate_deleteBy_incorrectUserId</b><br>Test class: com.nn.apibootcamp.test.DELETE_NegativeTestCase<br>Parameters: {Run=Yes, firstname=aeg, lastname=dasvsr, Email=eag@gmail.com, contact_no=6789208111, Plot_no=9-a, street=esag, state=esfg, country=eag, zipcode=12398}</td>
+<td></td>
+<td>0</td>
+<td>com.nn.apibootcamp.test.DELETE_NegativeTestCase@4be29ed9</td></tr>
+<tr>
+<td title='com.nn.apibootcamp.test.Post_NegativeTestCase.validate_incorrect_postEndpoint()'><b>validate_incorrect_postEndpoint</b><br>Test class: com.nn.apibootcamp.test.Post_NegativeTestCase<br>Parameters: {Run=Yes, firstname=aeg, lastname=dasvsr, Email=eag@gmail.com, contact_no=6789208111, Plot_no=9-a, street=esag, state=esfg, country=eag, zipcode=12398}</td>
+<td></td>
+<td>0</td>
+<td>com.nn.apibootcamp.test.Post_NegativeTestCase@6bbe85a8</td></tr>
+</table><p>
+</body>
+</html>
