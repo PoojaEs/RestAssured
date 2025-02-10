@@ -27,8 +27,8 @@ public class DELETE_NegativeTestCase {
 		obj.getAuthorizationData();
 		obj.getEndPointData();
      }
-	@Test(dataProvider="PositiveTestData" ,dataProviderClass=ExcelUtility.class)
-	public void Validate_deleteBy_incorrectUserId(Map<String,String> TEST_DATA)
+	
+	public void Validate_deleteBy_incorrectUserId()
 	{
 		LoggerLog4j.info(" Delete operation Negative Testcase started");
 		int userId = 118999;
@@ -45,8 +45,8 @@ public class DELETE_NegativeTestCase {
 	}
 	
 	//invalid endpoint
-	@Test(dataProvider="PositiveTestData" ,dataProviderClass=ExcelUtility.class)
-	public void Validate_DeleteEndPoint(Map<String,String> TEST_DATA)
+	
+	public void Validate_DeleteEndPoint()
 	{
 		
 		int userId = 118999;
