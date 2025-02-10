@@ -27,9 +27,8 @@ public class GET_NegativeTestCase {
 		obj.getEndPointData();
      }
 	
-	@Test(dataProvider="PositiveTestData" ,dataProviderClass=ExcelUtility.class)
-
-	public void validate_GetByincorrectUseriD(Map<String,String> TEST_DATA)
+	
+	public void validate_GetByincorrectUseriD()
 	
 	{LoggerLog4j.info(" Get operation Negative Testcase started");
 		int userId = 118999;
